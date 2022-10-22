@@ -182,13 +182,17 @@ body {
 /* ---------------------------- header contacts ------------------------------- */
 .contacts-list {
   display: flex;
+  align-items: center;
   gap: 50px;
 
   list-style: none;
 }
 
 .contact-header-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -201,12 +205,19 @@ body {
   text-decoration: none;
 }
 
-.contact-header-link:hover {
+.contact-header-link:hover,
+.contact-header-link:focus .icon-letter {
+  fill: var(--hover-focus-color);
+}
+
+.contact-header-link:hover,
+.contact-header-link:focus {
   color: var(--accent-color);
 }
 
-.contact-header-link:focus {
-  color: var(--accent-color);
+.contact-header-link:hover,
+.contact-header-link:focus .icon-smartphone {
+  fill: var(--hover-focus-color);
 }
 
 /* --------------------------------- hero ------------------------------------- */
@@ -271,13 +282,53 @@ body {
   width: 270px;
 }
 
-.benefits-item::before {
+.benefits-item:nth-child(1)::before {
   content: '';
   display: block;
   width: 270px;
   height: 120px;
   border-radius: 4px;
+  background-image: url(../images/sputnik.svg);
   background-color: var(--background-secondary-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.benefits-item:nth-child(2)::before {
+  content: '';
+  display: block;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-image: url(../images/clock.svg);
+  background-color: var(--background-secondary-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+.benefits-item:nth-child(3)::before {
+  content: '';
+  display: block;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-image: url(../images/diagram.svg);
+  background-color: var(--background-secondary-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+.benefits-item:nth-child(4)::before {
+  content: '';
+  display: block;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-image: url(../images/astronaut.svg);
+  background-color: var(--background-secondary-color);
+  background-repeat: no-repeat;
+  background-position: center;
   margin-bottom: 30px;
 }
 
@@ -366,7 +417,53 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
 
+  margin-bottom: 16px;
+
   color: var(--paragraph-text-color);
+}
+
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+}
+.team-soc-list-item {
+  width: 44px;
+  height: 44px;
+}
+
+.team-soc-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: #afb1b8;
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus .team-soc-list-item {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  fill: #ffffff;
+}
+
+/* ------------------------------ clients ------------------------------------ */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 /* ------------------------------- footer ------------------------------------ */
