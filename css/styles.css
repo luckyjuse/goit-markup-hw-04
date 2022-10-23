@@ -17,6 +17,7 @@
   --background-footer-color: #2f303a;
   --background-secondary-color: #f5f4fa;
   --border-item-color: #eeeeee;
+  --secondary-icon-color: #afb1b8;
   --main-font: 'Roboto';
 }
 
@@ -109,11 +110,15 @@ body {
 .button-secondary:hover {
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button-secondary:focus {
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ----------------------- header ---------------------- */
@@ -203,6 +208,9 @@ body {
 
   color: var(--paragraph-text-color);
   text-decoration: none;
+}
+
+.icon-letter {
 }
 
 .contact-header-link:hover,
@@ -440,11 +448,11 @@ body {
   justify-content: center;
   align-items: center;
 
-  fill: #afb1b8;
+  fill: var(--secondary-icon-color);
 }
 
-.team-soc-link:hover,
-.team-soc-link:focus .team-soc-list-item {
+.team-soc-link:focus,
+.team-soc-link:hover {
   background-color: var(--accent-color);
   border-radius: 50%;
   fill: #ffffff;
@@ -466,12 +474,59 @@ body {
   letter-spacing: 0.03em;
 }
 
+.clients-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.clients-item {
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--secondary-icon-color);
+  border-radius: 4px;
+}
+
+.clients-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-icon {
+  fill: var(--secondary-icon-color);
+}
+
+.clients-item:hover .clients-icon {
+  fill: var(--hover-focus-color);
+}
+.clients-item:hover {
+  border: 1px solid var(--hover-focus-color);
+}
+
+.clients-link:focus .clients-icon {
+  fill: var(--hover-focus-color);
+}
+
+.clients-link:focus .clients-item {
+  border: 1px solid var(--hover-focus-color);
+}
+
 /* ------------------------------- footer ------------------------------------ */
 .footer {
   padding: 60px 0px;
 
   background-color: var(--background-footer-color);
 }
+
+.footer > .container {
+  display: flex;
+  gap: 70px;
+}
+
 .footer-logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -487,6 +542,7 @@ body {
   text-decoration: none;
 }
 .address {
+  width: 231px;
   font-style: normal;
 }
 .address-list {
@@ -527,6 +583,50 @@ body {
   color: var(--accent-color);
 }
 
+.footer-soc-section {
+  margin-top: 12px;
+}
+.footer-soc-description {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--secondary-text-color);
+}
+
+.footer-soc-list {
+  display: flex;
+  gap: 10px;
+
+  list-style: none;
+}
+.footer-soc-list-item {
+  display: flex;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 100%;
+  fill: #ffffff;
+}
+.footer-soc-list-item:hover,
+.footer-soc-link:focus {
+  background-color: var(--hover-focus-color);
+  border-radius: 50%;
+}
+
 /* --------------------- portfolio second page -------------------- */
 .portfolio {
   padding-top: 94px;
@@ -542,6 +642,7 @@ body {
 
   list-style: none;
 }
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -550,6 +651,11 @@ body {
 }
 .portfolio-item {
   width: 370px;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-item-border {
